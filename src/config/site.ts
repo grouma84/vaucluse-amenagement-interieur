@@ -1,5 +1,5 @@
 ﻿export const SITE = {
-  name: "GROUMA PLÂTRERIE",
+  name: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
 
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
 
@@ -8,13 +8,13 @@
   owner: "Jaoid Grouma",
 
   description:
-    "GROUMA PLÂTRERIE réalise vos travaux de plâtrerie, cloisons, plafonds, isolation intérieure, peinture et aménagement intérieur à Carpentras et dans le Vaucluse.",
+    "Vaucluse Aménagement Intérieur réalise vos travaux de plâtrerie, isolation, peinture, agencement et transformation intérieure à Carpentras et dans le Vaucluse.",
 
   shortDescription:
-    "Plâtrerie, isolation, peinture et transformation intérieure.",
+    "Plâtrerie • Isolation • Peinture • Agencement",
 
   seoTitle:
-    "Plaquiste à Carpentras | GROUMA PLÂTRERIE",
+    "Plaquiste à Carpentras | Vaucluse Aménagement Intérieur",
 
   location: {
     city: "Carpentras",

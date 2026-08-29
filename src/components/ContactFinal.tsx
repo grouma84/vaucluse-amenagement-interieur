@@ -21,7 +21,7 @@ export function ContactFinal() {
     const message = String(form.get("message") || "")
 
     const text = [
-      "Bonjour GROUMA PLÂTRERIE,",
+      "Bonjour VAUCLUSE AMÉNAGEMENT INTÉRIEUR,",
       "",
       "Je souhaite vous parler d’un projet.",
       "",

@@ -73,7 +73,7 @@ export function Professionals() {
 
             <p className="mt-4 leading-7 text-zinc-400">
               Communes, intercommunalités, département, établissements publics
-              et gestionnaires de patrimoine peuvent consulter GROUMA PLÂTRERIE
+              et gestionnaires de patrimoine peuvent consulter VAUCLUSE AMÉNAGEMENT INTÉRIEUR
               pour des travaux de plâtrerie, isolation, plafonds et peinture.
             </p>
           </article>

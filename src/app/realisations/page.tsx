@@ -5,7 +5,7 @@ import { GalleryGrid } from "@/components/GalleryGrid"
 export const metadata: Metadata = {
   title: "Réalisations",
   description:
-    "Découvrez des réalisations de plâtrerie, plafonds, isolation et aménagement intérieur réalisées par GROUMA PLÂTRERIE dans le Vaucluse.",
+    "Découvrez des réalisations de plâtrerie, plafonds, isolation et aménagement intérieur réalisées par VAUCLUSE AMÉNAGEMENT INTÉRIEUR dans le Vaucluse.",
 }
 
 export default function RealisationsPage() {

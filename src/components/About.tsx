@@ -11,7 +11,7 @@
 
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
-              GROUMA PLÂTRERIE
+              VAUCLUSE AMÉNAGEMENT INTÉRIEUR
             </p>
 
             <p className="mt-6 text-3xl font-semibold tracking-tight">
@@ -35,7 +35,7 @@
           <div className="max-w-2xl">
 
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-              Qui est derrière GROUMA ?
+              Qui est derrière l’entreprise ?
             </p>
 
             <h2

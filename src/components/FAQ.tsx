@@ -2,7 +2,7 @@
   {
     question: "Travaillez-vous dans le neuf et la rénovation ?",
     answer:
-      "Oui. GROUMA PLÂTRERIE intervient aussi bien sur des constructions neuves que sur des projets de rénovation intérieure : cloisons, doublages, plafonds, isolation, joints et finitions selon le chantier.",
+      "Oui. VAUCLUSE AMÉNAGEMENT INTÉRIEUR intervient aussi bien sur des constructions neuves que sur des projets de rénovation intérieure : cloisons, doublages, plafonds, isolation, joints et finitions selon le chantier.",
   },
   {
     question: "Pouvez-vous intervenir uniquement pour refaire un plafond ?",

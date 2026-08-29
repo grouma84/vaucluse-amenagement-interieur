@@ -14,7 +14,7 @@ export function Footer() {
 
           <div>
             <p className="text-lg font-semibold tracking-tight">
-              GROUMA PLÂTRERIE
+              VAUCLUSE AMÉNAGEMENT INTÉRIEUR
             </p>
 
             <p className="mt-3 max-w-xs text-sm leading-6 text-zinc-400">
@@ -95,7 +95,7 @@ export function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-zinc-800 pt-6 text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
 
           <p>
-            © {year} GROUMA PLÂTRERIE
+            © {year} VAUCLUSE AMÉNAGEMENT INTÉRIEUR
           </p>
 
           <Link

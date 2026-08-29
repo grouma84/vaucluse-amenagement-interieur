@@ -8,10 +8,10 @@ export function Header() {
         <Link
           href="/"
           className="shrink-0 font-semibold tracking-tight text-zinc-950"
-          aria-label="Accueil GROUMA PLÂTRERIE"
+          aria-label="Accueil VAUCLUSE AMÉNAGEMENT INTÉRIEUR"
         >
           <span className="hidden sm:inline">
-            GROUMA PLÂTRERIE
+            VAUCLUSE AMÉNAGEMENT INTÉRIEUR
           </span>
 
           <span className="sm:hidden">

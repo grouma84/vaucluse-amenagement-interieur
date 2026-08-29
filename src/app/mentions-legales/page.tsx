@@ -27,6 +27,7 @@ export default function MentionsLegalesPage() {
 
             <div className="mt-4 space-y-1">
               <p>GROUMA PLÂTRERIE & AMÉNAGEMENT VAUCLUSE</p>
+              <p>Site exploité sous le nom : VAUCLUSE AMÉNAGEMENT INTÉRIEUR</p>
               <p>Entreprise individuelle — Jaoid Grouma</p>
               <p>26 rue des Remparts, 84200 Carpentras</p>
               <p>SIREN : 502 442 726</p>

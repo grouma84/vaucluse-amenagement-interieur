@@ -73,7 +73,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
           <p className="absolute bottom-5 left-5 right-5 text-sm text-white/80">
-            Réalisation GROUMA PLÂTRERIE — faux plafond en cours de chantier
+            Réalisation VAUCLUSE AMÉNAGEMENT INTÉRIEUR — faux plafond en cours de chantier
           </p>
 
         </div>
