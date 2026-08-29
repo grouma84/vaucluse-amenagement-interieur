@@ -7,6 +7,8 @@ import { SITE } from "@/config/site"
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.siteUrl),
+
   title: {
     default: SITE.seoTitle,
     template: `%s | ${SITE.name}`,
@@ -38,6 +40,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: SITE.seoTitle,
     description: SITE.description,
+    url: SITE.siteUrl,
   },
 }
 

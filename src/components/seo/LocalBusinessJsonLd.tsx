@@ -12,6 +12,8 @@ export function LocalBusinessJsonLd() {
     name: SITE.name,
     legalName: SITE.legalName,
     description: SITE.description,
+    url: SITE.siteUrl,
+    "@id": `${SITE.siteUrl}/#business`,
 
     telephone: SITE.contact.phoneInternational,
     email: SITE.contact.email,

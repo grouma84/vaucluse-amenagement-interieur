@@ -2,7 +2,10 @@
 
 export const metadata: Metadata = {
   title: "Mentions légales",
-  description: "Mentions légales du site GROUMA PLÂTRERIE.",
+  description: "Mentions légales du site VAUCLUSE AMÉNAGEMENT INTÉRIEUR.",
+  alternates: {
+    canonical: "/mentions-legales",
+  },
 }
 
 export default function MentionsLegalesPage() {

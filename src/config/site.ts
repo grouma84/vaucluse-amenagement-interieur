@@ -1,7 +1,7 @@
 ﻿export const SITE = {
   name: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
 
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
+  siteUrl: "https://www.vaucluse-amenagement-interieur.fr",
 
   legalName: "GROUMA PLÂTRERIE & AMÉNAGEMENT VAUCLUSE",
 

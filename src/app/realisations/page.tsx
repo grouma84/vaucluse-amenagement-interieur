@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Réalisations",
   description:
     "Découvrez des réalisations de plâtrerie, plafonds, isolation et aménagement intérieur réalisées par VAUCLUSE AMÉNAGEMENT INTÉRIEUR dans le Vaucluse.",
+  alternates: {
+    canonical: "/realisations",
+  },
 }
 
 export default function RealisationsPage() {

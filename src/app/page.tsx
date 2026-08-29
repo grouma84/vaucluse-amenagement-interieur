@@ -6,7 +6,13 @@ import { Professionals } from "@/components/Professionals"
 import { About } from "@/components/About"
 import { FAQ } from "@/components/FAQ"
 import { ContactFinal } from "@/components/ContactFinal"
+import type { Metadata } from "next"
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+}
 export default function Home() {
   return (
     <main>
