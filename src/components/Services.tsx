@@ -55,7 +55,7 @@ export function Services() {
 
               <div className="mt-auto pt-8">
                 <Link
-                  href={`/contact?projet=${service.id}`}
+                  href="/#contact"
                   className="inline-flex items-center gap-2 font-semibold text-zinc-950 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-950"
                 >
                   {service.cta}
