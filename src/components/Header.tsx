@@ -1,4 +1,4 @@
-﻿import Link from "next/link"
+import Link from "next/link"
 
 export function Header() {
   return (
@@ -15,7 +15,7 @@ export function Header() {
           </span>
 
           <span className="sm:hidden">
-            GROUMA
+            VAI
           </span>
         </Link>
 
