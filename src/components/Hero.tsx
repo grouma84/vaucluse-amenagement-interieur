@@ -21,7 +21,7 @@ export function Hero() {
 
             <h1
               id="hero-title"
-              className="text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
+              className="text-3xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
             >
               {hero.title}
             </h1>

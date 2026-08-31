@@ -22,7 +22,7 @@ export default function RealisationsPage() {
             Réalisations
           </p>
 
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
             Réalisations de plâtrerie et aménagement intérieur
           </h1>
 
