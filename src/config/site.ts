@@ -1,4 +1,4 @@
-﻿export const SITE = {
+export const SITE = {
   name: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
 
   siteUrl: "https://www.vaucluse-amenagement-interieur.fr",
@@ -8,7 +8,7 @@
   owner: "Jaoid Grouma",
 
   description:
-    "Vaucluse Aménagement Intérieur réalise vos travaux de plâtrerie, isolation, peinture, agencement et transformation intérieure à Carpentras et dans le Vaucluse.",
+    "Plaquiste à Carpentras, Vaucluse Aménagement Intérieur réalise cloisons, doublages, faux plafonds, isolation intérieure, peinture et placo décoratif dans le Vaucluse.",
 
   shortDescription:
     "Plâtrerie • Isolation • Peinture • Agencement",

@@ -19,7 +19,7 @@ export const HOME_CONTENT = {
   },
 
   services: {
-    title: "Que souhaitez-vous faire ?",
+    title: "Travaux de pl\u00e2trerie et d\u2019am\u00e9nagement int\u00e9rieur",
     intro:
       "Chaque chantier part d\u2019un besoin concret. Voici les demandes que VAUCLUSE AM\u00c9NAGEMENT INT\u00c9RIEUR prend en charge le plus souvent.",
 
@@ -75,7 +75,7 @@ export const HOME_CONTENT = {
 
       {
         id: "finitions",
-        title: "Aller jusqu\u2019aux finitions",
+        title: "Placo, joints et peinture : aller jusqu\u2019aux finitions",
         subtitle:
           "Placo, joints et peinture dans la continuit\u00e9 du chantier.",
         description:
