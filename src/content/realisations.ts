@@ -187,9 +187,9 @@
   },
   {
     src: "/images/realisations/plaques-platre-murs-plafond-en-cours.jpg",
-    alt: "Pièce en cours d’aménagement avec des plaques de plâtre posées aux murs et au plafond, et des câbles apparents.",
-    caption: "Plaques de plâtre visibles sur les murs et le plafond d’une pièce en chantier, avec des câbles électriques en attente.",
-    category: "cloison",
+    alt: "Doublage intérieur en plaques de plâtre posé sur les murs de cette pièce en cours de travaux.",
+    caption: "Doublage des murs en plaques de plâtre avant réalisation des joints et finitions.",
+    category: "doublage",
   },
   {
     src: "/images/realisations/ossature-metallique-doublage-mur.jpg",
