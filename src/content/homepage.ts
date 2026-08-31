@@ -1,9 +1,9 @@
 export const HOME_CONTENT = {
   hero: {
     eyebrow: "VAUCLUSE AM\u00c9NAGEMENT INT\u00c9RIEUR",
-    title: "Pl\u00e2trerie, isolation et transformation int\u00e9rieure",
+    title: "Plaquiste \u00e0 Carpentras \u2014 pl\u00e2trerie, isolation et am\u00e9nagement int\u00e9rieur",
     description:
-      "Cr\u00e9ation de pi\u00e8ces, cloisons, plafonds, isolation, placo d\u00e9coratif et finitions \u00e0 Carpentras et dans le Vaucluse.",
+      "Cloisons, doublages, faux plafonds, isolation int\u00e9rieure, peinture et placo d\u00e9coratif \u00e0 Carpentras et dans le Vaucluse.",
     supportingText:
       "Vous avez un projet en neuf ou en r\u00e9novation ? Parlons d\u2019abord de ce que vous voulez obtenir, puis de la solution la plus adapt\u00e9e.",
     primaryCta: {
