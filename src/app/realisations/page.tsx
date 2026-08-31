@@ -3,9 +3,9 @@ import Link from "next/link"
 import { GalleryGrid } from "@/components/GalleryGrid"
 
 export const metadata: Metadata = {
-  title: "Réalisations",
+  title: "Réalisations de plâtrerie à Carpentras",
   description:
-    "Découvrez des réalisations de plâtrerie, plafonds, isolation et aménagement intérieur réalisées par VAUCLUSE AMÉNAGEMENT INTÉRIEUR dans le Vaucluse.",
+    "Découvrez nos chantiers de plâtrerie, faux plafonds, isolation et aménagement intérieur à Carpentras et dans le Vaucluse.",
   alternates: {
     canonical: "/realisations",
   },
@@ -23,7 +23,7 @@ export default function RealisationsPage() {
           </p>
 
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Voir ce qui se passe avant les finitions.
+            Réalisations de plâtrerie et aménagement intérieur
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
@@ -39,7 +39,7 @@ export default function RealisationsPage() {
 
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight">
-              Les réalisations GROUMA
+              Chantiers de plâtrerie, isolation et aménagement
             </h2>
 
             <p className="mt-4 leading-7 text-zinc-600">
