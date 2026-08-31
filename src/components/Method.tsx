@@ -1,4 +1,4 @@
-﻿const STEPS = [
+const STEPS = [
   {
     number: "01",
     title: "Comprendre le projet",
@@ -41,7 +41,7 @@ export function Method() {
               id="method-title"
               className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
             >
-              Savoir ce qui va être fait, avant de commencer.
+              Un chantier de plâtrerie clair, de l’étude aux finitions
             </h2>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-600">

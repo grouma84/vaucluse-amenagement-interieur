@@ -1,4 +1,4 @@
-﻿const FAQ_ITEMS = [
+const FAQ_ITEMS = [
   {
     question: "Travaillez-vous dans le neuf et la rénovation ?",
     answer:
@@ -44,7 +44,7 @@ export function FAQ() {
             id="faq-title"
             className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
           >
-            Avant de commencer un chantier
+            Questions fréquentes sur les travaux de plâtrerie
           </h2>
         </div>
 

@@ -1,4 +1,4 @@
-﻿import Image from "next/image"
+import Image from "next/image"
 import Link from "next/link"
 import { FEATURED_REALISATIONS } from "@/content/featured-realisations"
 
@@ -21,7 +21,7 @@ export function GalleryPreview() {
             id="realisations-title"
             className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
           >
-            Voir le chantier, pas seulement le résultat.
+            Réalisations de plâtrerie, isolation et faux plafonds
           </h2>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
