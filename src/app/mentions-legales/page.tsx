@@ -95,7 +95,7 @@ export default function MentionsLegalesPage() {
             </p>
 
             <p className="mt-4">
-              Vous pouvez également contacter directement GROUMA PLÂTRERIE
+              Vous pouvez également contacter directement VAUCLUSE AMÉNAGEMENT INTÉRIEUR
               par téléphone ou par email.
             </p>
           </section>
