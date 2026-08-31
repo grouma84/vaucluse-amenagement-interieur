@@ -25,8 +25,7 @@ export function GalleryPreview() {
           </h2>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
-            Ossatures, plafonds, isolation et pose des plaques : quelques étapes
-            de chantiers réalisés.
+            Ossatures, faux plafonds, isolation et pose des plaques : découvrez quelques étapes de chantier et notre savoir-faire en plâtrerie à Carpentras et dans le Vaucluse.
           </p>
 
         </div>
