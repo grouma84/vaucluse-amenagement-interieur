@@ -19,14 +19,14 @@
   },
   {
     src: "/images/realisations/ossature-metallique-plafond-en-cours.jpg",
-    alt: "Pièce en chantier avec une ossature métallique visible au plafond, des câbles apparents et des fenêtres sur le côté.",
+    alt: "Ossature métallique de faux plafond en cours de pose dans une pièce en rénovation.",
     caption: "Ossature métallique du plafond en cours d'installation dans une pièce en chantier.",
     category: "plafond",
   },
   {
     src: "/images/realisations/faux-plafond-plaques-platre-en-cours.jpg",
-    alt: "Piece en chantier avec un faux plafond en plaques de platre partiellement pose et une ouverture visible dans la structure.",
-    caption: "Faux plafond en plaques de platre en cours d'installation dans une piece aux murs en blocs apparents.",
+    alt: "Pièce en chantier avec un faux plafond en plaques de plâtre partiellement posé et une ouverture visible dans la structure.",
+    caption: "Faux plafond en plaques de plâtre en cours d'installation dans une pièce aux murs en blocs apparents.",
     category: "plafond",
   },
   {
@@ -49,8 +49,8 @@
   },
   {
     src: "/images/realisations/isolation-plafond-chantier-renovation.jpg",
-    alt: "Piece en renovation avec structure de plafond apparente, rouleaux d'isolant et materiaux de chantier au sol.",
-    caption: "Vue d'une piece en cours de renovation, avec une structure de plafond apparente, des rouleaux d'isolant et des plaques entreposees.",
+    alt: "Isolation et ossature de plafond en cours dans une pièce en rénovation.",
+    caption: "Préparation de l'isolation et du plafond avant fermeture par les plaques de plâtre.",
     category: "isolation",
   },
   {
@@ -103,7 +103,7 @@
   },
   {
     src: "/images/realisations/ossature-metallique-cloison-en-cours-02.jpg",
-    alt: "Une ossature métallique est installée devant un mur maçonné, avec un véhicule ancien visible au premier plan.",
+    alt: "Ossature métallique d'une future cloison intérieure en cours de montage devant un mur maçonné.",
     caption: "Mise en place d’une ossature métallique pour une future cloison dans un espace intérieur.",
     category: "cloison",
   },
@@ -175,9 +175,9 @@
   },
   {
     src: "/images/realisations/piece-interieure-murs-briques-reseaux-apparents.jpg",
-    alt: "Pièce intérieure en chantier avec murs en briques apparentes, fenêtre, câbles et conduites visibles sous une charpente en bois.",
-    caption: "Les murs en briques, la fenêtre, les câbles et les conduites sont visibles dans cette pièce en cours d’aménagement.",
-    category: "autre",
+    alt: "Mur intérieur en briques avant doublage, avec réseaux techniques apparents sous une charpente en bois.",
+    caption: "Préparation de la pièce et des réseaux avant la réalisation du doublage intérieur.",
+    category: "doublage",
   },
   {
     src: "/images/realisations/doublage-plaques-platre-en-cours.jpg",
@@ -200,25 +200,25 @@
   {
     src: "/images/realisations/pose-isolation-murs-pare-vapeur.jpg",
     alt: "Panneaux isolants avec pare-vapeur visibles sur les murs d'une pièce en cours de chantier.",
-    caption: "Isolation des murs posée autour de deux fenêtres, avec joints apparents et câbles électriques en attente.",
+    caption: "Pose de l'isolation murale autour des fenêtres avant réalisation du parement intérieur.",
     category: "isolation",
   },
   {
     src: "/images/realisations/pose-isolation-murs-ossature-metallique.jpg",
     alt: "Isolation visible entre des montants métalliques autour de plusieurs fenêtres, avec des câbles apparents.",
-    caption: "Panneaux isolants et pare-vapeur visibles entre l’ossature métallique des murs, avant la pose du parement.",
+    caption: "Isolation maintenue entre les montants métalliques avant fermeture du doublage.",
     category: "isolation",
   },
   {
     src: "/images/realisations/isolation-murs-pare-vapeur-en-cours.jpg",
     alt: "Pièce en chantier avec isolation et pare-vapeur visibles sur les murs, fenêtres posées et ossature métallique apparente.",
-    caption: "Isolation et pare-vapeur visibles sur les murs d'une pièce en cours d'aménagement, avec ossature métallique apparente sur le mur du fond.",
+    caption: "Mise en place de l'isolation et du pare-vapeur avant réalisation du doublage intérieur.",
     category: "isolation",
   },
   {
     src: "/images/realisations/pose-isolation-ossature-metallique-mur.jpg",
     alt: "Mur en cours d'isolation avec panneaux isolants et ossature métallique visibles.",
-    caption: "Panneaux isolants et montants métalliques en cours de mise en place sur un mur.",
+    caption: "Préparation d'un doublage isolé avec mise en place des panneaux et des montants métalliques.",
     category: "isolation",
   },
   {
@@ -230,14 +230,14 @@
   {
     src: "/images/realisations/pose-isolation-pare-vapeur-ossature-metallique.jpg",
     alt: "Isolation avec pare-vapeur visible entre une ossature métallique et un mur en blocs.",
-    caption: "Panneaux isolants avec pare-vapeur posés dans une ossature métallique, devant un mur en blocs.",
+    caption: "Isolation et pare-vapeur intégrés à l'ossature avant fermeture du mur.",
     category: "isolation",
   },
   {
     src: "/images/realisations/plaques-platre-murs-plafond-en-cours-02.jpg",
     alt: "Pièce en cours d’aménagement avec murs et plafond en plaques de plâtre, câbles apparents et mur en briques visible.",
-    caption: "Murs et plafond revêtus de plaques de plâtre dans une pièce en cours de chantier, avec réseaux électriques apparents et mur en briques non habillé.",
-    category: "renovation",
+    caption: "Murs et plafond revêtus de plaques de plâtre au cours des travaux de doublage intérieur.",
+    category: "doublage",
   },
   {
     src: "/images/realisations/pose-plaques-platre-murs-plafond.jpg",

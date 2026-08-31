@@ -9,10 +9,8 @@ const CATEGORY_LABELS: Record<string, string> = {
   cloison: "Cloisons",
   isolation: "Isolation",
   doublage: "Doublages",
-  renovation: "Rénovation",
   decoratif: "Décoratif",
   "joints-finitions": "Finitions",
-  autre: "Autres",
 }
 
 export function GalleryGrid() {
