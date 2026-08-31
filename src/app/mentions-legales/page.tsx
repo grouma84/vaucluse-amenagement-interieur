@@ -56,10 +56,14 @@ export default function MentionsLegalesPage() {
               Hébergement
             </h2>
 
-            <p className="mt-4">
-              À compléter avant la mise en ligne définitive avec le nom,
-              l’adresse et les coordonnées de l’hébergeur du site.
-            </p>
+            <div className="mt-4 space-y-1">
+              <p>Netlify, Inc.</p>
+              <p>101 2nd Street</p>
+              <p>San Francisco, CA 94105</p>
+              <p>États-Unis</p>
+              <p>Téléphone : +1 415 691 1573</p>
+              <p>Email : support@netlify.com</p>
+            </div>
           </section>
 
           <section>
