@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import "./globals.css"
 
 import { Header } from "@/components/Header"
@@ -32,6 +32,18 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+
+  icons: {
+    icon: [
+      {
+        url: "/images/branding/logo-vai-icon-transparent.png",
+        type: "image/png",
+        sizes: "488x488",
+      },
+    ],
+    shortcut: "/images/branding/logo-vai-icon-transparent.png",
+    apple: "/images/branding/logo-vai-icon-transparent.png",
   },
 
   openGraph: {

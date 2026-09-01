@@ -1,22 +1,32 @@
+import Image from "next/image"
 import Link from "next/link"
 
 export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
-
         <Link
           href="/"
-          className="shrink-0 font-semibold tracking-tight text-zinc-950"
+          className="flex shrink-0 items-center"
           aria-label="Accueil VAUCLUSE AMÉNAGEMENT INTÉRIEUR"
         >
-          <span className="hidden sm:inline">
-            VAUCLUSE AMÉNAGEMENT INTÉRIEUR
-          </span>
+          <Image
+            src="/images/branding/logo-vai-horizontal-transparent.png"
+            alt=""
+            width={1358}
+            height={331}
+            priority
+            className="hidden h-10 w-auto sm:block"
+          />
 
-          <span className="sm:hidden">
-            VAI
-          </span>
+          <Image
+            src="/images/branding/logo-vai-icon-transparent.png"
+            alt=""
+            width={488}
+            height={488}
+            priority
+            className="h-9 w-9 object-contain sm:hidden"
+          />
         </Link>
 
         <nav
@@ -57,9 +67,7 @@ export function Header() {
             Devis
           </span>
         </Link>
-
       </div>
     </header>
   )
 }
-
