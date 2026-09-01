@@ -32,6 +32,8 @@ export const HOME_CONTENT = {
         description:
           "Vous avez un grand volume \u00e0 diviser ou besoin d\u2019une pi\u00e8ce suppl\u00e9mentaire ? Cr\u00e9ation de cloisons, isolation si n\u00e9cessaire, r\u00e9servations, joints et finitions selon le projet.",
         cta: "Cr\u00e9er un nouvel espace",
+        detailsLabel: "En savoir plus sur les cloisons et doublages",
+        detailsHref: "/cloisons-doublages-carpentras",
       },
 
       {
