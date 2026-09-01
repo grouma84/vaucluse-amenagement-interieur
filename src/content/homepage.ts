@@ -52,6 +52,8 @@ export const HOME_CONTENT = {
         description:
           "Mur difficile \u00e0 r\u00e9cup\u00e9rer, plafond fissur\u00e9, plafond \u00e0 remettre de niveau ou habillage \u00e0 refaire. La solution est choisie selon l\u2019\u00e9tat r\u00e9el du support : r\u00e9paration, doublage, faux plafond, reprise des joints ou pr\u00e9paration avant peinture.",
         cta: "Montrer le probl\u00e8me",
+        detailsLabel: "En savoir plus sur les faux plafonds",
+        detailsHref: "/faux-plafond-carpentras",
       },
 
       {

@@ -54,6 +54,15 @@ export function Services() {
               </div>
 
               <div className="mt-auto pt-8">
+                {"detailsHref" in service && "detailsLabel" in service && (
+                  <Link
+                    href={service.detailsHref}
+                    className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-amber-700 underline decoration-amber-300 underline-offset-4 transition hover:decoration-amber-700"
+                  >
+                    {service.detailsLabel}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                )}
                 <Link
                   href="/#contact"
                   className="inline-flex items-center gap-2 font-semibold text-zinc-950 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-950"
