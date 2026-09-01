@@ -15,11 +15,11 @@
             </p>
 
             <p className="mt-6 text-3xl font-semibold tracking-tight">
-              Jaoid Grouma
+              Artisan plaquiste
             </p>
 
             <p className="mt-2 text-zinc-400">
-              Plaquiste
+              Plus de 25 ans de métier
             </p>
           </div>
 
@@ -35,31 +35,31 @@
           <div className="max-w-2xl">
 
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-              Qui est derrière l’entreprise ?
+              L’expérience derrière chaque chantier
             </p>
 
             <h2
               id="about-title"
               className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
             >
-              Un interlocuteur qui connaît le chantier.
+              Un interlocuteur unique, du projet aux finitions.
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-zinc-600">
-              Je suis Jaoid Grouma, plaquiste de métier depuis plus de 25 ans.
-              J’interviens sur des travaux de plâtrerie, isolation et transformation
-              intérieure, en neuf comme en rénovation.
+              VAUCLUSE AMÉNAGEMENT INTÉRIEUR s’appuie sur plus de 25 ans
+              d’expérience en plâtrerie. Chaque chantier est étudié selon l’existant,
+              les contraintes du bâtiment et le résultat recherché.
             </p>
 
             <p className="mt-5 text-lg leading-8 text-zinc-600">
-              Vous échangez directement avec la personne qui étudie votre projet
-              et intervient sur le chantier.
+              Vous échangez directement avec la personne qui étudie votre projet,
+              organise l’intervention et réalise les travaux.
             </p>
 
             <p className="mt-5 leading-7 text-zinc-500">
-              Mon objectif n’est pas de vous vendre une solution avant d’avoir vu
-              le problème. Il faut d’abord comprendre l’espace, le support et le
-              résultat recherché.
+              L’objectif est simple : définir clairement la solution avant de commencer
+              et réaliser un travail adapté au chantier, sans proposer plus que
+              nécessaire.
             </p>
 
           </div>
