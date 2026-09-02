@@ -312,6 +312,26 @@ export default function FauxPlafondCarpentrasPage() {
                         </p>
 
                         <p>
+                            Pour un besoin centré sur le confort thermique ou acoustique,
+                            consultez notre page{" "}
+                            <Link
+                                href="/isolation-interieure-carpentras"
+                                className="font-semibold text-zinc-950 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-950"
+                            >
+                                isolation intérieure à Carpentras
+                            </Link>
+                            . Pour les plafonds à plusieurs niveaux, retombées ou
+                            volumes esthétiques, découvrez aussi le{" "}
+                            <Link
+                                href="/placo-decoratif-carpentras"
+                                className="font-semibold text-zinc-950 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-950"
+                            >
+                                placo décoratif à Carpentras
+                            </Link>
+                            .
+                        </p>
+
+                        <p>
                             Chaque projet est étudié selon l’existant et le résultat
                             recherché afin de déterminer la solution de plâtrerie adaptée.
                         </p>

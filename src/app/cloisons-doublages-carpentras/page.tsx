@@ -141,6 +141,18 @@ export default function CloisonsDoublagesCarpentrasPage() {
                         </p>
 
                         <p>
+                            Si votre besoin concerne principalement le confort thermique
+                            ou acoustique d’une paroi, consultez notre page{" "}
+                            <Link
+                                href="/isolation-interieure-carpentras"
+                                className="font-semibold text-zinc-950 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-950"
+                            >
+                                isolation intérieure à Carpentras
+                            </Link>
+                            .
+                        </p>
+
+                        <p>
                             VAUCLUSE AMÉNAGEMENT INTÉRIEUR intervient à Carpentras et dans
                             le Vaucluse pour les travaux de cloisons, doublages, isolation
                             intérieure et plâtrerie.
