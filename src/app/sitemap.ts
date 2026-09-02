@@ -26,6 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   },
     {
+      url: `${baseUrl}/isolation-interieure-carpentras`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/realisations`,
       changeFrequency: "monthly",
       priority: 0.8,

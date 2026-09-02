@@ -65,6 +65,8 @@ export const HOME_CONTENT = {
         description:
           "Mur froid, pi\u00e8ce bruyante, plafond \u00e0 isoler ou s\u00e9paration entre deux espaces. Mise en \u0153uvre de solutions d\u2019isolation int\u00e9rieure adapt\u00e9es \u00e0 la paroi et au projet, sans masquer un probl\u00e8me qui doit \u00eatre trait\u00e9 en amont.",
         cta: "Parler de mon probl\u00e8me de confort",
+        detailsLabel: "En savoir plus sur l\u2019isolation int\u00e9rieure",
+        detailsHref: "/isolation-interieure-carpentras",
       },
 
       {
