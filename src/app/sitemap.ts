@@ -20,6 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+  {
+    url: `${baseUrl}/placo-decoratif-carpentras`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
     {
       url: `${baseUrl}/realisations`,
       changeFrequency: "monthly",

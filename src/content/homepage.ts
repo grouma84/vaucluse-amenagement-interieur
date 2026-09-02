@@ -75,6 +75,8 @@ export const HOME_CONTENT = {
         description:
           "Le placo ne sert pas seulement \u00e0 fermer un mur. Il peut aussi permettre de cr\u00e9er des niches, meubles TV int\u00e9gr\u00e9s, retomb\u00e9es, gorges lumineuses, plafonds \u00e0 plusieurs niveaux ou formes particuli\u00e8res.",
         cta: "Voir ce qu\u2019il est possible de cr\u00e9er",
+        detailsLabel: "En savoir plus sur le placo d\u00e9coratif",
+        detailsHref: "/placo-decoratif-carpentras",
       },
 
       {
