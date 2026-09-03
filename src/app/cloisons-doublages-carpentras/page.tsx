@@ -9,6 +9,21 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/cloisons-doublages-carpentras",
     },
+  openGraph: {
+    title: "Cloisons et doublages à Carpentras",
+    description:
+      "Création de cloisons et doublages en plaques de plâtre à Carpentras et dans le Vaucluse : séparation de pièces, habillage des murs, isolation et finitions.",
+    url: "/cloisons-doublages-carpentras",
+    siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "/images/realisations/cloison-plaques-platre-ossature-en-cours.jpg",
+        alt: "Cloison en plaques de plâtre avec ossature métallique en cours de réalisation",
+      },
+    ],
+  },
 }
 
 const CHANTIER_STEPS = [

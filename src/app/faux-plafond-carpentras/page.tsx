@@ -9,6 +9,21 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/faux-plafond-carpentras",
     },
+  openGraph: {
+    title: "Faux plafond à Carpentras",
+    description:
+      "Création et rénovation de faux plafonds en plaques de plâtre à Carpentras et dans le Vaucluse : ossature, isolation selon le projet et finitions.",
+    url: "/faux-plafond-carpentras",
+    siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "/images/realisations/ossature-metallique-faux-plafond-en-cours.jpg",
+        alt: "Ossature métallique d’un faux plafond en cours de réalisation",
+      },
+    ],
+  },
 }
 
 const CHANTIER_STEPS = [

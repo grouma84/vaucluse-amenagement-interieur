@@ -9,6 +9,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/placo-decoratif-carpentras",
   },
+  openGraph: {
+    title: "Placo décoratif à Carpentras",
+    description:
+      "Placo décoratif à Carpentras : niches, meuble TV, retombées, plafonds décoratifs, éclairages intégrés et formes sur mesure dans le Vaucluse.",
+    url: "/placo-decoratif-carpentras",
+    siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "/images/realisations/plafond-decoratif-mur-tv-eclaire.jpg",
+        alt: "Mur TV en placo décoratif avec volumes et éclairage intégré",
+      },
+    ],
+  },
 }
 
 const CHANTIER_STEPS = [

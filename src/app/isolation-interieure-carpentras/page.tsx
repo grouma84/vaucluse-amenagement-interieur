@@ -9,6 +9,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/isolation-interieure-carpentras",
   },
+  openGraph: {
+    title: "Isolation intérieure à Carpentras",
+    description:
+      "Isolation intérieure à Carpentras : murs, doublages et plafonds pour améliorer le confort thermique et acoustique, été comme hiver, dans le Vaucluse.",
+    url: "/isolation-interieure-carpentras",
+    siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "/images/realisations/isolation-mur-ossature-metallique.jpg",
+        alt: "Isolation intérieure d’un mur entre une ossature métallique",
+      },
+    ],
+  },
 }
 
 const CHANTIER_STEPS = [
