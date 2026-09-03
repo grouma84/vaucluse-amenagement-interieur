@@ -5,7 +5,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Placo décoratif à Carpentras",
   description:
-    "Création en placo décoratif à Carpentras et dans le Vaucluse : niches, meuble TV intégré, retombées, plafonds décoratifs, éclairages intégrés et formes sur mesure.",
+    "Placo décoratif à Carpentras : niches, meuble TV, retombées, plafonds décoratifs, éclairages intégrés et formes sur mesure dans le Vaucluse.",
   alternates: {
     canonical: "/placo-decoratif-carpentras",
   },

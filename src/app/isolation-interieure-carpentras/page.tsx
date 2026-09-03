@@ -5,7 +5,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Isolation intérieure à Carpentras",
   description:
-    "Isolation intérieure à Carpentras et dans le Vaucluse : murs, doublages et plafonds pour améliorer le confort thermique et acoustique, en hiver comme pendant les fortes chaleurs.",
+    "Isolation intérieure à Carpentras : murs, doublages et plafonds pour améliorer le confort thermique et acoustique, été comme hiver, dans le Vaucluse.",
   alternates: {
     canonical: "/isolation-interieure-carpentras",
   },
