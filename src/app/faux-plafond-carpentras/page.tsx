@@ -9,21 +9,21 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/faux-plafond-carpentras",
     },
-  openGraph: {
-    title: "Faux plafond à Carpentras",
-    description:
-      "Création et rénovation de faux plafonds en plaques de plâtre à Carpentras et dans le Vaucluse : ossature, isolation selon le projet et finitions.",
-    url: "/faux-plafond-carpentras",
-    siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
-    locale: "fr_FR",
-    type: "website",
-    images: [
-      {
-        url: "/images/realisations/ossature-metallique-faux-plafond-en-cours.jpg",
-        alt: "Ossature métallique d’un faux plafond en cours de réalisation",
-      },
-    ],
-  },
+    openGraph: {
+        title: "Faux plafond à Carpentras",
+        description:
+            "Création et rénovation de faux plafonds en plaques de plâtre à Carpentras et dans le Vaucluse : ossature, isolation selon le projet et finitions.",
+        url: "/faux-plafond-carpentras",
+        siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
+        locale: "fr_FR",
+        type: "website",
+        images: [
+            {
+                url: "/images/realisations/ossature-metallique-faux-plafond-en-cours.jpg",
+                alt: "Ossature métallique d’un faux plafond en cours de réalisation",
+            },
+        ],
+    },
 }
 
 const CHANTIER_STEPS = [
@@ -76,7 +76,7 @@ export default function FauxPlafondCarpentrasPage() {
                     <div className="flex items-center px-6 py-20 sm:px-10 lg:px-14 lg:py-24">
                         <div className="max-w-2xl">
                             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
-                                Plâtrerie • Carpentras & Vaucluse
+                                Créer • Rénover • Remettre à niveau
                             </p>
 
                             <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
