@@ -48,12 +48,12 @@ export const HOME_CONTENT = {
 
       {
         id: "murs-plafonds",
-        title: "Refaire murs et plafonds",
+        title: "Créer ou refaire un faux plafond",
         subtitle:
-          "Reprendre un support ab\u00eem\u00e9, irr\u00e9gulier ou ancien.",
+          "Création, rénovation ou remise à niveau d’un plafond.",
         description:
-          "Mur difficile \u00e0 r\u00e9cup\u00e9rer, plafond fissur\u00e9, plafond \u00e0 remettre de niveau ou habillage \u00e0 refaire. La solution est choisie selon l\u2019\u00e9tat r\u00e9el du support : r\u00e9paration, doublage, faux plafond, reprise des joints ou pr\u00e9paration avant peinture.",
-        cta: "Montrer le probl\u00e8me",
+          "Plafond abîmé, irrégulier ou à remettre de niveau ? Création d’un faux plafond, reprise d’un plafond existant, intégration d’isolation, spots ou réseaux, joints et préparation avant peinture selon le projet.",
+        cta: "Étudier mon plafond",
         detailsLabel: "En savoir plus sur les faux plafonds",
         detailsHref: "/faux-plafond-carpentras",
       },
