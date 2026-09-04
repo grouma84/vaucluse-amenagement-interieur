@@ -9,21 +9,21 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/cloisons-doublages-carpentras",
     },
-  openGraph: {
-    title: "Cloisons et doublages à Carpentras",
-    description:
-      "Création de cloisons et doublages en plaques de plâtre à Carpentras et dans le Vaucluse : séparation de pièces, habillage des murs, isolation et finitions.",
-    url: "/cloisons-doublages-carpentras",
-    siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
-    locale: "fr_FR",
-    type: "website",
-    images: [
-      {
-        url: "/images/realisations/cloison-plaques-platre-ossature-en-cours.jpg",
-        alt: "Cloison en plaques de plâtre avec ossature métallique en cours de réalisation",
-      },
-    ],
-  },
+    openGraph: {
+        title: "Cloisons et doublages à Carpentras",
+        description:
+            "Création de cloisons et doublages en plaques de plâtre à Carpentras et dans le Vaucluse : séparation de pièces, habillage des murs, isolation et finitions.",
+        url: "/cloisons-doublages-carpentras",
+        siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
+        locale: "fr_FR",
+        type: "website",
+        images: [
+            {
+                url: "/images/realisations/cloison-plaques-platre-ossature-en-cours.jpg",
+                alt: "Cloison en plaques de plâtre avec ossature métallique en cours de réalisation",
+            },
+        ],
+    },
 }
 
 const CHANTIER_STEPS = [
@@ -79,7 +79,7 @@ export default function CloisonsDoublagesCarpentrasPage() {
                     <div className="flex items-center px-6 py-20 sm:px-10 lg:px-14 lg:py-24">
                         <div className="max-w-2xl">
                             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
-                                Plâtrerie • Carpentras & Vaucluse
+                                Créer • Séparer • Transformer un espace
                             </p>
 
                             <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
@@ -87,9 +87,10 @@ export default function CloisonsDoublagesCarpentrasPage() {
                             </h1>
 
                             <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-                                Création de cloisons et doublages en plaques de plâtre pour
-                                séparer les espaces, créer une nouvelle pièce, habiller un mur
-                                ou intégrer une isolation intérieure.
+                                Vous souhaitez créer une chambre, un bureau, séparer une
+                                grande pièce ou reprendre un mur existant&nbsp;? Décrivez
+                                simplement le résultat recherché&nbsp;: la solution
+                                technique vient ensuite.
                             </p>
 
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -97,16 +98,21 @@ export default function CloisonsDoublagesCarpentrasPage() {
                                     href="/#contact"
                                     className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 py-3 font-semibold text-zinc-950 transition hover:bg-zinc-200"
                                 >
-                                    Parler de mon projet
+                                    Voir si mon projet est réalisable
                                 </Link>
 
                                 <Link
                                     href="/realisations"
                                     className="inline-flex min-h-12 items-center justify-center rounded-md border border-zinc-700 px-6 py-3 font-semibold transition hover:bg-zinc-900"
                                 >
-                                    Voir les réalisations
+                                    Voir comment je travaille
                                 </Link>
                             </div>
+
+                            <p className="mt-4 max-w-xl text-sm leading-6 text-zinc-400">
+                                Quelques informations et photos suffisent pour commencer à
+                                comprendre votre projet.
+                            </p>
                         </div>
                     </div>
 
@@ -129,49 +135,107 @@ export default function CloisonsDoublagesCarpentrasPage() {
                 </div>
             </section>
 
-            {/* INTRO */}
+            {/* RECONNAISSANCE DU BESOIN */}
             <section className="bg-white px-6 py-20 text-zinc-950 sm:px-10 lg:py-28">
-                <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-                    <div>
+                <div className="mx-auto max-w-7xl">
+                    <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-                            Aménagement intérieur
+                            Votre besoin
                         </p>
 
                         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                            Créer, séparer ou habiller un espace intérieur
+                            Vous êtes peut-être dans cette situation
                         </h2>
+
+                        <p className="mt-6 text-lg leading-8 text-zinc-600">
+                            Avant de choisir une cloison, un doublage ou une isolation,
+                            partons de ce que vous souhaitez réellement obtenir dans votre
+                            logement.
+                        </p>
                     </div>
 
-                    <div className="space-y-5 text-lg leading-8 text-zinc-600">
-                        <p>
-                            Les cloisons permettent de redistribuer un volume intérieur :
-                            créer une chambre, un bureau, un dressing ou simplement séparer
-                            deux espaces.
-                        </p>
+                    <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
+                        <article className="bg-white p-8 sm:p-10">
+                            <p className="text-sm font-semibold text-amber-700">01</p>
 
-                        <p>
-                            Le doublage répond à un besoin différent. Il permet de créer une
-                            nouvelle paroi devant un mur existant afin de reprendre sa
-                            surface ou, selon le projet, d’intégrer une isolation.
-                        </p>
+                            <h3 className="mt-4 text-2xl font-semibold">
+                                Il me manque une pièce
+                            </h3>
 
-                        <p>
-                            Si votre besoin concerne principalement le confort thermique
-                            ou acoustique d’une paroi, consultez notre page{" "}
+                            <p className="mt-4 leading-7 text-zinc-600">
+                                Une grande pièce ou un volume existant peut parfois être
+                                redistribué pour créer une chambre, un bureau, un dressing
+                                ou un nouvel espace utile.
+                            </p>
+                        </article>
+
+                        <article className="bg-white p-8 sm:p-10">
+                            <p className="text-sm font-semibold text-amber-700">02</p>
+
+                            <h3 className="mt-4 text-2xl font-semibold">
+                                Je veux séparer une grande pièce
+                            </h3>
+
+                            <p className="mt-4 leading-7 text-zinc-600">
+                                Une cloison peut permettre de transformer un même volume en
+                                deux espaces avec des usages différents et mieux organisés.
+                            </p>
+                        </article>
+
+                        <article className="bg-white p-8 sm:p-10">
+                            <p className="text-sm font-semibold text-amber-700">03</p>
+
+                            <h3 className="mt-4 text-2xl font-semibold">
+                                Je veux reprendre un mur existant
+                            </h3>
+
+                            <p className="mt-4 leading-7 text-zinc-600">
+                                Lorsqu’un mur est irrégulier ou difficile à finir, un
+                                doublage peut permettre de recréer une nouvelle paroi
+                                adaptée au projet.
+                            </p>
+                        </article>
+
+                        <article className="bg-white p-8 sm:p-10">
+                            <p className="text-sm font-semibold text-amber-700">04</p>
+
+                            <h3 className="mt-4 text-2xl font-semibold">
+                                Je veux moins entendre d’une pièce à l’autre
+                            </h3>
+
+                            <p className="mt-4 leading-7 text-zinc-600">
+                                Selon la configuration, une cloison ou un doublage peut
+                                intégrer une isolation acoustique adaptée au besoin.
+                            </p>
                             <Link
                                 href="/isolation-interieure-carpentras"
-                                className="font-semibold text-zinc-950 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-950"
+                                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-zinc-950 underline decoration-amber-400 underline-offset-4 transition hover:decoration-zinc-950"
                             >
-                                isolation intérieure à Carpentras
+                                En savoir plus sur l’isolation intérieure
+                                <span aria-hidden="true">→</span>
                             </Link>
-                            .
+                        </article>
+                    </div>
+
+                    <div className="mt-10 border-l-4 border-amber-600 bg-zinc-50 p-6 sm:p-8">
+                        <h3 className="text-xl font-semibold">
+                            Vous ne savez pas s’il vous faut une cloison ou un doublage&nbsp;?
+                        </h3>
+
+                        <p className="mt-3 max-w-3xl leading-7 text-zinc-600">
+                            Ce n’est pas un problème. Vous n’avez pas besoin de connaître
+                            la solution technique avant de me contacter. Expliquez
+                            simplement l’espace actuel et ce que vous souhaitez créer,
+                            séparer ou améliorer.
                         </p>
 
-                        <p>
-                            VAUCLUSE AMÉNAGEMENT INTÉRIEUR intervient à Carpentras et dans
-                            le Vaucluse pour les travaux de cloisons, doublages, isolation
-                            intérieure et plâtrerie.
-                        </p>
+                        <Link
+                            href="/#contact"
+                            className="mt-5 inline-flex items-center gap-2 font-semibold text-zinc-950 underline decoration-amber-400 underline-offset-4 transition hover:decoration-zinc-950"
+                        >
+                            Décrire ce que je veux obtenir
+                            <span aria-hidden="true">→</span>
+                        </Link>
                     </div>
                 </div>
             </section>
