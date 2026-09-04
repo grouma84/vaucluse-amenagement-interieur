@@ -283,59 +283,6 @@ export default function CloisonsDoublagesCarpentrasPage() {
                 </div>
             </section>
 
-            {/* BESOINS */}
-            <section className="bg-white px-6 py-20 text-zinc-950 sm:px-10 lg:py-28">
-                <div className="mx-auto max-w-7xl">
-                    <div className="max-w-3xl">
-                        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-                            Votre projet
-                        </p>
-
-                        <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                            Dans quels cas réaliser des cloisons ou des doublages ?
-                        </h2>
-                    </div>
-
-                    <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-3">
-                        <article className="bg-white p-8">
-                            <h3 className="text-xl font-semibold">
-                                Créer une nouvelle pièce
-                            </h3>
-
-                            <p className="mt-4 leading-7 text-zinc-600">
-                                Chambre, bureau, dressing ou autre espace peuvent être créés
-                                en redistribuant un volume existant avec des cloisons adaptées
-                                au projet.
-                            </p>
-                        </article>
-
-                        <article className="bg-white p-8">
-                            <h3 className="text-xl font-semibold">
-                                Reprendre un mur existant
-                            </h3>
-
-                            <p className="mt-4 leading-7 text-zinc-600">
-                                Lorsqu’un mur est irrégulier ou nécessite un nouvel habillage,
-                                un doublage peut permettre de recréer une paroi adaptée aux
-                                finitions prévues.
-                            </p>
-                        </article>
-
-                        <article className="bg-white p-8">
-                            <h3 className="text-xl font-semibold">
-                                Intégrer une isolation intérieure
-                            </h3>
-
-                            <p className="mt-4 leading-7 text-zinc-600">
-                                Selon la configuration, l’ossature d’une cloison ou d’un
-                                doublage peut recevoir une isolation adaptée à l’objectif
-                                thermique ou acoustique du projet.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
             {/* MÉTHODE */}
             <section className="bg-zinc-100 px-6 py-20 text-zinc-950 sm:px-10 lg:py-28">
                 <div className="mx-auto max-w-7xl">
