@@ -79,7 +79,7 @@ export default function PlacoDecoratifCarpentrasPage() {
           <div className="flex items-center px-6 py-20 sm:px-10 lg:px-14 lg:py-24">
             <div className="max-w-2xl">
               <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
-                Plâtrerie décorative • Carpentras & Vaucluse
+                IMAGINER • STRUCTURER • METTRE EN LUMIÈRE
               </p>
 
               <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
@@ -87,9 +87,10 @@ export default function PlacoDecoratifCarpentrasPage() {
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-                Création de niches, meubles TV intégrés, retombées, plafonds
-                décoratifs et formes en plaques de plâtre conçues selon l’espace,
-                l’usage et le rendu recherché.
+                Un mur TV trop vide, un plafond sans relief ou une pièce
+                à laquelle vous voulez donner du caractère ? Le placo permet
+                de créer des volumes, niches, retombées et éclairages intégrés
+                conçus directement pour votre espace.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -129,37 +130,101 @@ export default function PlacoDecoratifCarpentrasPage() {
         </div>
       </section>
 
-      {/* INTRO */}
+      {/* PROJECTION DU BESOIN */}
       <section className="bg-white px-6 py-20 text-zinc-950 sm:px-10 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-              Aménagement sur mesure
+              Votre idée
             </p>
 
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Le placo ne sert pas seulement à créer des murs
+              Et si cette pièce devenait vraiment différente&nbsp;?
             </h2>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
+              Partons du résultat que vous imaginez. Le volume, les formes,
+              les proportions et les détails techniques seront ensuite adaptés
+              à votre pièce et à la faisabilité du projet.
+            </p>
           </div>
 
-          <div className="space-y-5 text-lg leading-8 text-zinc-600">
-            <p>
-              Les plaques de plâtre peuvent aussi servir à composer des volumes
-              directement intégrés à l’architecture intérieure : niches, habillage
-              d’un mur TV, retombées, plafonds à plusieurs niveaux ou éléments
-              décoratifs particuliers.
+          <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
+            <article className="bg-white p-8 sm:p-10">
+              <p className="text-sm font-semibold text-amber-700">01</p>
+
+              <h3 className="mt-4 text-2xl font-semibold">
+                Mon mur TV paraît vide
+              </h3>
+
+              <p className="mt-4 leading-7 text-zinc-600">
+                Créer une composition intégrée autour de l’écran avec des
+                volumes, niches, passages de câbles ou éclairages selon le
+                rendu recherché.
+              </p>
+            </article>
+
+            <article className="bg-white p-8 sm:p-10">
+              <p className="text-sm font-semibold text-amber-700">02</p>
+
+              <h3 className="mt-4 text-2xl font-semibold">
+                Je voudrais intégrer des niches
+              </h3>
+
+              <p className="mt-4 leading-7 text-zinc-600">
+                Des niches décoratives ou fonctionnelles peuvent être
+                dimensionnées selon l’espace disponible et les objets que
+                vous souhaitez mettre en valeur.
+              </p>
+            </article>
+
+            <article className="bg-white p-8 sm:p-10">
+              <p className="text-sm font-semibold text-amber-700">03</p>
+
+              <h3 className="mt-4 text-2xl font-semibold">
+                Mon plafond manque de relief
+              </h3>
+
+              <p className="mt-4 leading-7 text-zinc-600">
+                Retombées, différences de niveaux, bandeaux ou réservations
+                pour l’éclairage peuvent permettre de structurer visuellement
+                la pièce.
+              </p>
+            </article>
+
+            <article className="bg-white p-8 sm:p-10">
+              <p className="text-sm font-semibold text-amber-700">04</p>
+
+              <h3 className="mt-4 text-2xl font-semibold">
+                J’ai une idée particulière
+              </h3>
+
+              <p className="mt-4 leading-7 text-zinc-600">
+                Lignes, cadres, arrondis ou volumes particuliers peuvent être
+                étudiés selon les dimensions de la pièce, les supports et la
+                faisabilité technique.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-10 border-l-4 border-amber-600 bg-zinc-50 p-6 sm:p-8">
+            <h3 className="text-xl font-semibold">
+              Vous avez une photo d’inspiration&nbsp;?
+            </h3>
+
+            <p className="mt-3 max-w-3xl leading-7 text-zinc-600">
+              Envoyez l’image qui vous inspire avec quelques photos de votre
+              pièce. Cela permet déjà de comprendre le style recherché, les
+              volumes disponibles et ce qui peut être adapté à votre intérieur.
             </p>
 
-            <p>
-              L’intérêt est de construire l’ouvrage selon les dimensions réelles de
-              la pièce plutôt que d’ajouter un élément standard. Les proportions,
-              les réservations et les finitions sont définies en fonction du projet.
-            </p>
-
-            <p>
-              VAUCLUSE AMÉNAGEMENT INTÉRIEUR étudie les projets de placo décoratif à
-              Carpentras et dans le Vaucluse, en neuf comme en rénovation.
-            </p>
+            <Link
+              href="/#contact"
+              className="mt-5 inline-flex items-center gap-2 font-semibold text-zinc-950 underline decoration-amber-400 underline-offset-4 transition hover:decoration-zinc-950"
+            >
+              Montrer mon idée
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
