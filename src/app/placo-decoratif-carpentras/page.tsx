@@ -156,78 +156,38 @@ export default function PlacoDecoratifCarpentrasPage() {
           </div>
 
           {/* DEUX ÉTATS DU CLIENT */}
-          <div className="mt-16 grid gap-8 lg:grid-cols-2">
-
-            {/* CAS 1 */}
-            <article className="overflow-hidden border border-zinc-200 bg-white">
-              <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
-                <Image
-                  src="/images/realisations/plafond-decoratif-mur-tv-eclairage-led.jpg"
-                  alt="Réalisation de placo décoratif avec plafond, mur TV et éclairage LED à Carpentras"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+          {/* TEASER — DE L'EXISTANT AU RÉSULTAT */}
+          <div className="mx-auto mt-16 max-w-3xl px-1 sm:px-50">
+            <div className="overflow-hidden rounded-xl bg-zinc-950 shadow-lg">
+              <video
+                className="block h-auto w-full"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="Transformation d'une pièce en rénovation avec réalisation d'un plafond décoratif en placo à Carpentras"
+              >
+                <source
+                  src="/videos/plafond deco.mp4"
+                  type="video/mp4"
                 />
-              </div>
 
-              <div className="p-8 sm:p-10">
-                <p className="text-sm font-semibold text-amber-700">
-                  01 — L’inspiration existe déjà
-                </p>
+                Votre navigateur ne permet pas la lecture de cette vidéo.
+              </video>
+            </div>
 
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                  Vous savez déjà ce que vous voulez obtenir
-                </h3>
+            <div className="mx-auto mt-6 max-w-3xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
+                De l’existant au résultat
+              </p>
 
-                <p className="mt-4 leading-7 text-zinc-600">
-                  Une image, un croquis ou une réalisation qui vous inspire peut
-                  servir de point de départ. L’objectif n’est pas de la reproduire
-                  à l’identique, mais d’en comprendre les lignes, les proportions
-                  et l’effet recherché pour les adapter à votre pièce.
-                </p>
-
-                <p className="mt-5 text-sm leading-6 text-zinc-500">
-                  Mur TV en placo, niches, plafond décoratif, formes ou volumes
-                  particuliers&nbsp;: l’inspiration donne une direction, la pièce
-                  détermine le projet.
-                </p>
-              </div>
-            </article>
-
-            {/* CAS 2 */}
-            <article className="overflow-hidden border border-zinc-200 bg-white">
-              <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
-                <Image
-                  src="/images/realisations/placo-decoratif-volumes-sur-mesure.jpg"
-                  alt="Aménagement intérieur en placo avec volumes sur mesure dans le Vaucluse"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                />
-              </div>
-
-              <div className="p-8 sm:p-10">
-                <p className="text-sm font-semibold text-amber-700">
-                  02 — Le besoin est là
-                </p>
-
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                  Vous savez surtout ce que vous voulez changer
-                </h3>
-
-                <p className="mt-4 leading-7 text-zinc-600">
-                  Un mur qui paraît vide, un plafond sans relief ou une zone mal
-                  mise en valeur suffit pour commencer. Le projet se précise ensuite
-                  à partir des proportions de la pièce, de la lumière, de son usage
-                  et de l’effet recherché.
-                </p>
-
-                <p className="mt-5 text-sm leading-6 text-zinc-500">
-                  Il n’est pas nécessaire de connaître les termes du métier ni
-                  d’avoir déjà dessiné la solution.
-                </p>
-              </div>
-            </article>
+              <p className="mt-3 text-lg leading-8 text-zinc-600">
+                Pièce existante, traçage, ossature, mise en forme du plafond et
+                finitions&nbsp;: chaque étape permet de transformer l’espace tout en
+                adaptant le projet aux contraintes réelles de la pièce.
+              </p>
+            </div>
           </div>
 
           {/* MICRO-ENGAGEMENT */}
