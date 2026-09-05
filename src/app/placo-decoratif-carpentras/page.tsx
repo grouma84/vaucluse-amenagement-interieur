@@ -87,10 +87,9 @@ export default function PlacoDecoratifCarpentrasPage() {
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-                Un mur TV trop vide, un plafond sans relief ou une pièce
-                à laquelle vous voulez donner du caractère ? Le placo permet
-                de créer des volumes, niches, retombées et éclairages intégrés
-                conçus directement pour votre espace.
+                Une belle idée ne suffit pas : elle doit fonctionner dans la pièce réelle.
+                Proportions, lumière, usages et contraintes sont étudiés ensemble pour
+                construire un aménagement cohérent avec l’espace.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -113,7 +112,7 @@ export default function PlacoDecoratifCarpentrasPage() {
 
           <div className="relative min-h-[420px] lg:min-h-full">
             <Image
-              src="/images/realisations/plafond-decoratif-mur-tv-eclaire.jpg"
+              src="/images/realisations/plafond-decoratif-mur-tv-eclairage-led.jpg"
               alt="Pièce avec mur TV décoratif et plafond éclairé"
               fill
               priority
@@ -130,102 +129,145 @@ export default function PlacoDecoratifCarpentrasPage() {
         </div>
       </section>
 
-      {/* PROJECTION DU BESOIN */}
-      <section className="bg-white px-6 py-20 text-zinc-950 sm:px-10 lg:py-28">
+      {/* PROJECTION — VOTRE IDÉE */}
+      <section
+        id="votre-idee"
+        className="bg-white px-6 py-20 text-zinc-950 sm:px-10 lg:py-28"
+      >
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
+
+          {/* INTRO */}
+          <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
               Votre idée
             </p>
 
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Et si cette pièce devenait vraiment différente&nbsp;?
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+              Un projet peut commencer de plusieurs façons.
             </h2>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
-              Partons du résultat que vous imaginez. Le volume, les formes,
-              les proportions et les détails techniques seront ensuite adaptés
-              à votre pièce et à la faisabilité du projet.
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
+              Vous avez déjà une inspiration précise, ou simplement l’envie de
+              transformer un mur, un plafond ou une partie de la pièce&nbsp;?
+              Pour un projet de placo décoratif à Carpentras, le point de départ
+              reste le même&nbsp;: comprendre le résultat recherché avant de
+              l’adapter à l’espace réel.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
-            <article className="bg-white p-8 sm:p-10">
-              <p className="text-sm font-semibold text-amber-700">01</p>
+          {/* DEUX ÉTATS DU CLIENT */}
+          <div className="mt-16 grid gap-8 lg:grid-cols-2">
 
-              <h3 className="mt-4 text-2xl font-semibold">
-                Mon mur TV paraît vide
-              </h3>
+            {/* CAS 1 */}
+            <article className="overflow-hidden border border-zinc-200 bg-white">
+              <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+                <Image
+                  src="/images/realisations/plafond-decoratif-mur-tv-eclairage-led.jpg"
+                  alt="Réalisation de placo décoratif avec plafond, mur TV et éclairage LED à Carpentras"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+              </div>
 
-              <p className="mt-4 leading-7 text-zinc-600">
-                Créer une composition intégrée autour de l’écran avec des
-                volumes, niches, passages de câbles ou éclairages selon le
-                rendu recherché.
-              </p>
+              <div className="p-8 sm:p-10">
+                <p className="text-sm font-semibold text-amber-700">
+                  01 — L’inspiration existe déjà
+                </p>
+
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+                  Vous savez déjà ce que vous voulez obtenir
+                </h3>
+
+                <p className="mt-4 leading-7 text-zinc-600">
+                  Une image, un croquis ou une réalisation qui vous inspire peut
+                  servir de point de départ. L’objectif n’est pas de la reproduire
+                  à l’identique, mais d’en comprendre les lignes, les proportions
+                  et l’effet recherché pour les adapter à votre pièce.
+                </p>
+
+                <p className="mt-5 text-sm leading-6 text-zinc-500">
+                  Mur TV en placo, niches, plafond décoratif, formes ou volumes
+                  particuliers&nbsp;: l’inspiration donne une direction, la pièce
+                  détermine le projet.
+                </p>
+              </div>
             </article>
 
-            <article className="bg-white p-8 sm:p-10">
-              <p className="text-sm font-semibold text-amber-700">02</p>
+            {/* CAS 2 */}
+            <article className="overflow-hidden border border-zinc-200 bg-white">
+              <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+                <Image
+                  src="/images/realisations/placo-decoratif-volumes-sur-mesure.jpg"
+                  alt="Aménagement intérieur en placo avec volumes sur mesure dans le Vaucluse"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+              </div>
 
-              <h3 className="mt-4 text-2xl font-semibold">
-                Je voudrais intégrer des niches
-              </h3>
+              <div className="p-8 sm:p-10">
+                <p className="text-sm font-semibold text-amber-700">
+                  02 — Le besoin est là
+                </p>
 
-              <p className="mt-4 leading-7 text-zinc-600">
-                Des niches décoratives ou fonctionnelles peuvent être
-                dimensionnées selon l’espace disponible et les objets que
-                vous souhaitez mettre en valeur.
-              </p>
-            </article>
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+                  Vous savez surtout ce que vous voulez changer
+                </h3>
 
-            <article className="bg-white p-8 sm:p-10">
-              <p className="text-sm font-semibold text-amber-700">03</p>
+                <p className="mt-4 leading-7 text-zinc-600">
+                  Un mur qui paraît vide, un plafond sans relief ou une zone mal
+                  mise en valeur suffit pour commencer. Le projet se précise ensuite
+                  à partir des proportions de la pièce, de la lumière, de son usage
+                  et de l’effet recherché.
+                </p>
 
-              <h3 className="mt-4 text-2xl font-semibold">
-                Mon plafond manque de relief
-              </h3>
-
-              <p className="mt-4 leading-7 text-zinc-600">
-                Retombées, différences de niveaux, bandeaux ou réservations
-                pour l’éclairage peuvent permettre de structurer visuellement
-                la pièce.
-              </p>
-            </article>
-
-            <article className="bg-white p-8 sm:p-10">
-              <p className="text-sm font-semibold text-amber-700">04</p>
-
-              <h3 className="mt-4 text-2xl font-semibold">
-                J’ai une idée particulière
-              </h3>
-
-              <p className="mt-4 leading-7 text-zinc-600">
-                Lignes, cadres, arrondis ou volumes particuliers peuvent être
-                étudiés selon les dimensions de la pièce, les supports et la
-                faisabilité technique.
-              </p>
+                <p className="mt-5 text-sm leading-6 text-zinc-500">
+                  Il n’est pas nécessaire de connaître les termes du métier ni
+                  d’avoir déjà dessiné la solution.
+                </p>
+              </div>
             </article>
           </div>
 
-          <div className="mt-10 border-l-4 border-amber-600 bg-zinc-50 p-6 sm:p-8">
-            <h3 className="text-xl font-semibold">
-              Vous avez une photo d’inspiration&nbsp;?
-            </h3>
+          {/* MICRO-ENGAGEMENT */}
+          <div className="mt-12 overflow-hidden bg-zinc-950 px-6 py-10 text-white sm:px-10 lg:px-14 lg:py-12">
+            <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
 
-            <p className="mt-3 max-w-3xl leading-7 text-zinc-600">
-              Envoyez l’image qui vous inspire avec quelques photos de votre
-              pièce. Cela permet déjà de comprendre le style recherché, les
-              volumes disponibles et ce qui peut être adapté à votre intérieur.
-            </p>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-400">
+                  Une inspiration à montrer ?
+                </p>
 
-            <Link
-              href="/#contact"
-              className="mt-5 inline-flex items-center gap-2 font-semibold text-zinc-950 underline decoration-amber-400 underline-offset-4 transition hover:decoration-zinc-950"
-            >
-              Montrer mon idée
-              <span aria-hidden="true">→</span>
-            </Link>
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+                  Une image peut suffire pour commencer.
+                </h3>
+
+                <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
+                  Ajoutez la photo qui vous inspire et, si possible, quelques vues
+                  de la pièce concernée. Elles permettent déjà d’identifier ce qui
+                  peut être repris, adapté ou repensé avant d’aller plus loin.
+                </p>
+
+                <p className="mt-3 text-sm text-zinc-400">
+                  Photo, capture d’écran ou croquis — JPG, PNG ou WEBP.
+                </p>
+              </div>
+
+              <div className="lg:text-right">
+                <Link
+                  href="/#contact"
+                  className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 py-3 font-semibold text-zinc-950 transition hover:bg-zinc-100"
+                >
+                  Joindre mon image
+                  <span className="ml-2" aria-hidden="true">
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
+
         </div>
       </section>
 
