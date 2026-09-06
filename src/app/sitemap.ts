@@ -20,11 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-  {
-    url: `${baseUrl}/placo-decoratif-carpentras`,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  },
+    {
+      url: `${baseUrl}/placo-decoratif-carpentras`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/isolation-interieure-carpentras`,
       changeFrequency: "monthly",
@@ -33,6 +33,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/realisations`,
       changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/actu`,
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {

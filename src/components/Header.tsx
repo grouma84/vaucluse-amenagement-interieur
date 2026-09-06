@@ -48,6 +48,13 @@ export function Header() {
           </Link>
 
           <Link
+            href="/actu"
+            className="transition hover:text-zinc-950"
+          >
+            Actu
+          </Link>
+
+          <Link
             href="/#professionnels"
             className="transition hover:text-zinc-950"
           >
