@@ -66,14 +66,24 @@ export const ACTU_FEED = {
     },
 
     chantier: {
-        category: "CHANTIER",
-        title: "Créer des volumes et donner du relief au plafond",
+        category: "CHANTIER PARTICULIER",
+
+        title:
+            "Doublage sur ossature : chantier prêt pour les cloisons",
+
         excerpt:
-            "Ossature, niveaux, réservations et finitions : le plafond peut être travaillé pour structurer visuellement la pièce tout en intégrant les contraintes techniques.",
+            "Réalisation du doublage des murs sur ossature métallique. Prochaine étape : tracer et réaliser les cloisons.",
+
         image:
-            "/images/realisations/plafond-a-niveaux-avec-cable.jpg",
+            "/images/actu/doublage-ossature-chantier-neuf.jpg",
+
         imageAlt:
-            "Plafond en placo à plusieurs niveaux en cours de réalisation",
-        href: "/placo-decoratif-carpentras",
+            "Doublage des murs sur ossature métallique dans un chantier neuf",
+
+        href:
+            "/actu/doublage-ossature-chantier-neuf",
+
+        cta:
+            "Voir le chantier",
     },
 } as const
