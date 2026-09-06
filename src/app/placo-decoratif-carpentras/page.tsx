@@ -63,10 +63,10 @@ const REALISATIONS = [
       "Création de niveaux et de retombées au plafond avant la mise en place complète des finitions.",
   },
   {
-    src: "/images/realisations/finition-joints-plaques-platre-plafond.jpg",
-    alt: "Retombée de plafond en plaques de plâtre avec joints en cours de finition",
+    src: "/images/realisations/niches-rondes-placo-decoratif-mur.jpg",
+    alt: "Mur en placo décoratif avec trois niches rondes intégrées à Carpentras",
     caption:
-      "Préparation des joints et raccords d’un plafond avec retombée avant la finition finale.",
+      "Création de trois niches rondes intégrées dans un mur en placo décoratif.",
   },
 ] as const
 
@@ -74,43 +74,66 @@ export default function PlacoDecoratifCarpentrasPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="bg-zinc-950 text-white">
+      <section className="relative overflow-hidden bg-zinc-950 text-white">
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
-          <div className="flex items-center px-6 py-20 sm:px-10 lg:px-14 lg:py-24">
-            <div className="max-w-2xl">
-              <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
-                IMAGINER • STRUCTURER • METTRE EN LUMIÈRE
-              </p>
 
-              <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-                Placo décoratif à Carpentras
-              </h1>
+          {/* COLONNE TEXTE */}
+          <div className="relative flex min-h-[560px] items-center bg-zinc-950 px-6 py-20 sm:px-10 lg:px-14 lg:py-24">
+            <div className="relative z-10 w-full max-w-2xl">
+              {/* Panneau premium derrière le texte */}
+              <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm">
+                {/* Image floutée localisée uniquement sous le contenu */}
+                <div className="absolute inset-0">
+                  <Image
+                    src="/images/realisations/plafond-a-niveaux-avec-cable.jpg"
+                    alt=""
+                    fill
+                    aria-hidden="true"
+                    sizes="(max-width: 1024px) 100vw, 700px"
+                    className="object-cover object-center opacity-30 blur-md scale-110"
+                  />
+                  <div className="absolute inset-0 bg-zinc-950/70" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/8 via-transparent to-amber-300/5" />
+                </div>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-                Une belle idée ne suffit pas : elle doit fonctionner dans la pièce réelle.
-                Proportions, lumière, usages et contraintes sont étudiés ensemble pour
-                construire un aménagement cohérent avec l’espace.
-              </p>
+                {/* Contenu */}
+                <div className="relative z-10 px-8 py-10 sm:px-10 sm:py-12">
+                  <p className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">
+                    IMAGINER • STRUCTURER • METTRE EN LUMIÈRE
+                  </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/#contact"
-                  className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 py-3 font-semibold text-zinc-950 transition hover:bg-zinc-200"
-                >
-                  Parler de mon projet
-                </Link>
+                  <h1 className="max-w-xl text-4xl font-semibold leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl">
+                    Placo décoratif à Carpentras
+                  </h1>
 
-                <Link
-                  href="/realisations"
-                  className="inline-flex min-h-12 items-center justify-center rounded-md border border-zinc-700 px-6 py-3 font-semibold transition hover:bg-zinc-900"
-                >
-                  Voir les réalisations
-                </Link>
+                  <p className="mt-7 max-w-xl text-lg leading-8 text-zinc-200">
+                    Une belle idée ne suffit pas : elle doit fonctionner dans la pièce réelle.
+                    Proportions, lumière, usages et contraintes sont étudiés ensemble pour
+                    construire un aménagement cohérent avec l’espace.
+                  </p>
+
+                  <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                    <Link
+                      href="/#contact"
+                      className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 py-3 font-semibold text-zinc-950 transition hover:bg-zinc-200"
+                    >
+                      Parler de mon projet
+                    </Link>
+
+                    <Link
+                      href="/realisations"
+                      className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/20 bg-white/[0.05] px-6 py-3 font-semibold text-white transition hover:border-white/35 hover:bg-white/[0.08]"
+                    >
+                      Voir les réalisations
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="relative min-h-[420px] lg:min-h-full">
+          {/* PHOTO PRINCIPALE */}
+          <div className="relative min-h-[480px] overflow-hidden lg:min-h-full">
             <Image
               src="/images/realisations/plafond-decoratif-mur-tv-eclairage-led.jpg"
               alt="Pièce avec mur TV décoratif et plafond éclairé"
@@ -120,116 +143,22 @@ export default function PlacoDecoratifCarpentrasPage() {
               className="object-cover"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            {/* Fondu léger venant de la gauche */}
+            <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/30 via-transparent to-transparent lg:from-zinc-950/45" />
+
+            {/* Assombrissement bas pour la légende */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
             <p className="absolute bottom-5 left-5 right-5 text-sm text-white/80">
               Exemple de placo décoratif avec volumes et éclairage intégré
             </p>
           </div>
+
         </div>
       </section>
 
       {/* PROJECTION — VOTRE IDÉE */}
-      <section
-        id="votre-idee"
-        className="bg-white px-6 py-20 text-zinc-950 sm:px-10 lg:py-28"
-      >
-        <div className="mx-auto max-w-7xl">
 
-          {/* INTRO */}
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-              Votre idée
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-              Un projet peut commencer de plusieurs façons.
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
-              Vous avez déjà une inspiration précise, ou simplement l’envie de
-              transformer un mur, un plafond ou une partie de la pièce&nbsp;?
-              Pour un projet de placo décoratif à Carpentras, le point de départ
-              reste le même&nbsp;: comprendre le résultat recherché avant de
-              l’adapter à l’espace réel.
-            </p>
-          </div>
-
-          {/* DEUX ÉTATS DU CLIENT */}
-          {/* TEASER — DE L'EXISTANT AU RÉSULTAT */}
-          <div className="mx-auto mt-16 max-w-3xl px-1 sm:px-50">
-            <div className="overflow-hidden rounded-xl bg-zinc-950 shadow-lg">
-              <video
-                className="block h-auto w-full"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-label="Transformation d'une pièce en rénovation avec réalisation d'un plafond décoratif en placo à Carpentras"
-              >
-                <source
-                  src="/videos/plafond deco.mp4"
-                  type="video/mp4"
-                />
-
-                Votre navigateur ne permet pas la lecture de cette vidéo.
-              </video>
-            </div>
-
-            <div className="mx-auto mt-6 max-w-3xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-                De l’existant au résultat
-              </p>
-
-              <p className="mt-3 text-lg leading-8 text-zinc-600">
-                Pièce existante, traçage, ossature, mise en forme du plafond et
-                finitions&nbsp;: chaque étape permet de transformer l’espace tout en
-                adaptant le projet aux contraintes réelles de la pièce.
-              </p>
-            </div>
-          </div>
-
-          {/* MICRO-ENGAGEMENT */}
-          <div className="mt-12 overflow-hidden bg-zinc-950 px-6 py-10 text-white sm:px-10 lg:px-14 lg:py-12">
-            <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
-
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-400">
-                  Une inspiration à montrer ?
-                </p>
-
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                  Une image peut suffire pour commencer.
-                </h3>
-
-                <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
-                  Ajoutez la photo qui vous inspire et, si possible, quelques vues
-                  de la pièce concernée. Elles permettent déjà d’identifier ce qui
-                  peut être repris, adapté ou repensé avant d’aller plus loin.
-                </p>
-
-                <p className="mt-3 text-sm text-zinc-400">
-                  Photo, capture d’écran ou croquis — JPG, PNG ou WEBP.
-                </p>
-              </div>
-
-              <div className="lg:text-right">
-                <Link
-                  href="/#contact"
-                  className="inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 py-3 font-semibold text-zinc-950 transition hover:bg-zinc-100"
-                >
-                  Joindre mon image
-                  <span className="ml-2" aria-hidden="true">
-                    →
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
 
       {/* USAGES */}
       <section className="bg-zinc-100 px-6 py-20 text-zinc-950 sm:px-10 lg:py-28">
