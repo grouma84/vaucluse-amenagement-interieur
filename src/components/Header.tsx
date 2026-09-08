@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { MobileMenu } from "@/components/MobileMenu"
 
 export function Header() {
   return (
@@ -61,11 +62,13 @@ export function Header() {
             Pros & collectivités
           </Link>
         </nav>
+        <MobileMenu />
 
         <Link
           href="/#contact"
           className="inline-flex min-h-10 items-center justify-center rounded-md bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800"
         >
+
           <span className="hidden sm:inline">
             Demander un devis
           </span>
