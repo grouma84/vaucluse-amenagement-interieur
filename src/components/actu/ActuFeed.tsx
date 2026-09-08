@@ -3,6 +3,7 @@ import { ACTU_FEED } from "@/content/actu"
 import ChantierCard from "./ChantierCard"
 import QuestionCard from "./QuestionCard"
 import ReelCard from "./ReelCard"
+import { ACTU_ARTICLES } from "@/content/actu-articles"
 
 export default function ActuFeed() {
     return (
@@ -36,15 +37,20 @@ export default function ActuFeed() {
                 </div>
 
                 {/* CHANTIER LARGE */}
-                <div className="mt-8">
-                    <ChantierCard
-                        image={ACTU_FEED.chantier.image}
-                        imageAlt={ACTU_FEED.chantier.imageAlt}
-                        category={ACTU_FEED.chantier.category}
-                        title={ACTU_FEED.chantier.title}
-                        excerpt={ACTU_FEED.chantier.excerpt}
-                        href={ACTU_FEED.chantier.href}
-                    />
+                <div className="space-y-5">
+                    {[...ACTU_ARTICLES]
+                        .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+                        .map((article) => (
+                            <ChantierCard
+                                key={article.slug}
+                                category={article.category}
+                                title={article.title}
+                                excerpt={article.excerpt}
+                                image={article.image}
+                                imageAlt={article.imageAlt}
+                                href={`/actu/${article.slug}`}
+                            />
+                        ))}
                 </div>
 
             </div>
