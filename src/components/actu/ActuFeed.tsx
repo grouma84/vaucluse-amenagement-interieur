@@ -1,7 +1,6 @@
 import { ACTU_FEED } from "@/content/actu"
 
 import ChantierCard from "./ChantierCard"
-import QuestionCard from "./QuestionCard"
 import ReelCard from "./ReelCard"
 import { ACTU_ARTICLES } from "@/content/actu-articles"
 
@@ -21,18 +20,12 @@ export default function ActuFeed() {
                 </div>
 
                 {/* PREMIÈRE LIGNE */}
-                <div className="mt-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+                <div className="mt-10 flex justify-center lg:justify-start">
                     <ReelCard
                         video={ACTU_FEED.reel.video}
                         category={ACTU_FEED.reel.category}
                         title={ACTU_FEED.reel.title}
                         href={ACTU_FEED.reel.href}
-                    />
-
-                    <QuestionCard
-                        question={ACTU_FEED.question.question}
-                        answer={ACTU_FEED.question.answer}
-                        href={ACTU_FEED.question.href}
                     />
                 </div>
 
