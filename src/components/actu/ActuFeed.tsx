@@ -19,13 +19,20 @@ export default function ActuFeed() {
                     </h2>
                 </div>
 
-                {/* PREMIÈRE LIGNE */}
-                <div className="mt-10 flex justify-center lg:justify-start">
+                {/* REELS */}
+                <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:max-w-3xl">
                     <ReelCard
                         video={ACTU_FEED.reel.video}
                         category={ACTU_FEED.reel.category}
                         title={ACTU_FEED.reel.title}
                         href={ACTU_FEED.reel.href}
+                    />
+
+                    <ReelCard
+                        video="/images/realisations/chantier_doublage_particulier.mp4"
+                        category="CHANTIER EN VIDÉO"
+                        title="Doublage sur ossature : une étape du chantier"
+                        href="/actu/doublage-ossature-chantier-neuf"
                     />
                 </div>
 
