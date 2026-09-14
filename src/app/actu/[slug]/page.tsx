@@ -3,10 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
-import {
-    ACTU_ARTICLES,
-    getActuArticleBySlug,
-} from "@/content/actu-articles"
+import { createPublicSupabaseClient } from "@/lib/supabase-public"
 
 type ArticlePageProps = {
     params: Promise<{
@@ -14,19 +11,60 @@ type ArticlePageProps = {
     }>
 }
 
-export const dynamicParams = false
+export const dynamic = "force-dynamic"
 
-export function generateStaticParams() {
-    return ACTU_ARTICLES.map((article) => ({
-        slug: article.slug,
-    }))
+async function getArticle(slug: string) {
+    const supabase = createPublicSupabaseClient()
+
+    const { data, error } = await supabase
+        .from("articles")
+        .select(`
+      id,
+      slug,
+      category,
+      title,
+      excerpt,
+      intro,
+      content,
+      image_path,
+      image_alt,
+      location,
+      next_text,
+      service_href,
+      service_label,
+      status,
+      published_at
+    `)
+        .eq("slug", slug)
+        .eq("status", "published")
+        .maybeSingle()
+
+    if (error) {
+        throw new Error(
+            `Impossible de charger l'article : ${error.message}`
+        )
+    }
+
+    if (!data) {
+        return null
+    }
+
+    const { data: imageData } = supabase.storage
+        .from("actu-images")
+        .getPublicUrl(data.image_path)
+
+    return {
+        ...data,
+        imageUrl: imageData.publicUrl,
+    }
 }
 
 export async function generateMetadata({
     params,
 }: ArticlePageProps): Promise<Metadata> {
     const { slug } = await params
-    const article = getActuArticleBySlug(slug)
+
+    const article = await getArticle(slug)
 
     if (!article) {
         return {
@@ -49,33 +87,44 @@ export async function generateMetadata({
             siteName: "VAUCLUSE AMÉNAGEMENT INTÉRIEUR",
             locale: "fr_FR",
             type: "article",
+
             images: [
                 {
-                    url: article.image,
-                    alt: article.imageAlt,
+                    url: article.imageUrl,
+                    alt: article.image_alt,
                 },
             ],
         },
     }
 }
 
-function formatDate(date: string) {
+function formatDate(date: string | null) {
+    if (!date) {
+        return ""
+    }
+
     return new Intl.DateTimeFormat("fr-FR", {
         day: "numeric",
         month: "long",
         year: "numeric",
-    }).format(new Date(`${date}T12:00:00`))
+    }).format(new Date(date))
 }
 
 export default async function ActuArticlePage({
     params,
 }: ArticlePageProps) {
     const { slug } = await params
-    const article = getActuArticleBySlug(slug)
+
+    const article = await getArticle(slug)
 
     if (!article) {
         notFound()
     }
+
+    const paragraphs: string[] = String(article.content ?? "")
+        .split(/\n\s*\n/)
+        .map((paragraph: string) => paragraph.trim())
+        .filter((paragraph: string) => paragraph.length > 0)
 
     return (
         <main className="bg-white text-zinc-950">
@@ -105,9 +154,12 @@ export default async function ActuArticlePage({
                     </p>
 
                     <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-500">
-                        <time dateTime={article.publishedAt}>
-                            {formatDate(article.publishedAt)}
-                        </time>
+
+                        {article.published_at && (
+                            <time dateTime={article.published_at}>
+                                {formatDate(article.published_at)}
+                            </time>
+                        )}
 
                         {article.location && (
                             <>
@@ -115,6 +167,7 @@ export default async function ActuArticlePage({
                                 <span>{article.location}</span>
                             </>
                         )}
+
                     </div>
 
                 </div>
@@ -123,11 +176,13 @@ export default async function ActuArticlePage({
             {/* PHOTO PRINCIPALE */}
             <section className="px-6 pt-10 sm:px-10 lg:pt-14">
                 <div className="mx-auto max-w-5xl">
+
                     <figure>
+
                         <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100 sm:aspect-[16/10]">
                             <Image
-                                src={article.image}
-                                alt={article.imageAlt}
+                                src={article.imageUrl}
+                                alt={article.image_alt}
                                 fill
                                 priority
                                 sizes="(max-width: 1024px) 100vw, 1024px"
@@ -136,9 +191,11 @@ export default async function ActuArticlePage({
                         </div>
 
                         <figcaption className="mt-3 text-sm leading-6 text-zinc-500">
-                            {article.imageAlt}
+                            {article.image_alt}
                         </figcaption>
+
                     </figure>
+
                 </div>
             </section>
 
@@ -151,17 +208,19 @@ export default async function ActuArticlePage({
                     </p>
 
                     <div className="mt-8 space-y-6 text-lg leading-8 text-zinc-600">
-                        {article.paragraphs.map((paragraph) => (
-                            <p key={paragraph}>
+
+                        {paragraphs.map((paragraph: string, index: number) => (
+                            <p key={`${article.id}-${index}`}>
                                 {paragraph}
                             </p>
                         ))}
+
                     </div>
 
-                    {article.next && (
+                    {article.next_text && (
                         <div className="mt-10 border-l-4 border-amber-500 bg-[#f6f4ef] px-6 py-5">
                             <p className="font-semibold text-zinc-950">
-                                {article.next}
+                                {article.next_text}
                             </p>
                         </div>
                     )}
@@ -170,22 +229,25 @@ export default async function ActuArticlePage({
             </article>
 
             {/* SERVICE ASSOCIÉ */}
-            {article.serviceHref && article.serviceLabel && (
+            {article.service_href && article.service_label && (
                 <section className="border-y border-zinc-200 bg-zinc-50 px-6 py-10 sm:px-10">
+
                     <div className="mx-auto flex max-w-3xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
 
                         <div>
+
                             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">
                                 Travaux concernés
                             </p>
 
                             <p className="mt-2 font-semibold text-zinc-950">
-                                {article.serviceLabel}
+                                {article.service_label}
                             </p>
+
                         </div>
 
                         <Link
-                            href={article.serviceHref}
+                            href={article.service_href}
                             className="inline-flex w-fit items-center gap-2 font-semibold text-zinc-950 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-950"
                         >
                             En savoir plus
@@ -193,11 +255,13 @@ export default async function ActuArticlePage({
                         </Link>
 
                     </div>
+
                 </section>
             )}
 
             {/* CTA FINAL */}
             <section className="px-6 py-16 sm:px-10 lg:py-20">
+
                 <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl bg-zinc-950 px-7 py-10 text-white sm:px-10 lg:px-14 lg:py-12">
 
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
@@ -207,6 +271,7 @@ export default async function ActuArticlePage({
                     <div className="mt-4 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
 
                         <div>
+
                             <h2 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
                                 Vous avez un chantier à nous montrer ?
                             </h2>
@@ -215,6 +280,7 @@ export default async function ActuArticlePage({
                                 Quelques photos et une courte explication permettent déjà de
                                 comprendre ce que vous souhaitez faire.
                             </p>
+
                         </div>
 
                         <Link
@@ -228,10 +294,11 @@ export default async function ActuArticlePage({
                         </Link>
 
                     </div>
+
                 </div>
+
             </section>
 
         </main>
-
     )
 }

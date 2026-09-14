@@ -1,58 +1,129 @@
 ﻿import type { MetadataRoute } from "next"
-import { SITE } from "@/config/site"
-import { ACTU_ARTICLES } from "@/content/actu-articles"
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = SITE.siteUrl || "http://localhost:3000"
+import { createPublicSupabaseClient } from "@/lib/supabase-public"
+
+export const dynamic = "force-dynamic"
+
+const SITE_URL =
+  "https://www.vaucluse-amenagement-interieur.fr"
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const supabase = createPublicSupabaseClient()
+
+  // ========================================================
+  // PAGES FIXES DU SITE
+  // ========================================================
+
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: SITE_URL,
+    },
+    {
+      url: `${SITE_URL}/actu`,
+    },
+    {
+      url: `${SITE_URL}/realisations`,
+    },
+    {
+      url: `${SITE_URL}/cloisons-doublages-carpentras`,
+    },
+    {
+      url: `${SITE_URL}/isolation-interieure-carpentras`,
+    },
+    {
+      url: `${SITE_URL}/faux-plafond-carpentras`,
+    },
+    {
+      url: `${SITE_URL}/placo-decoratif-carpentras`,
+    },
+    {
+      url: `${SITE_URL}/mentions-legales`,
+    },
+  ]
+
+  // ========================================================
+  // ARTICLES PUBLIES
+  // ========================================================
+
+  const {
+    data: articlesData,
+    error: articlesError,
+  } = await supabase
+    .from("articles")
+    .select(`
+      slug,
+      published_at
+    `)
+    .eq("status", "published")
+    .order("published_at", {
+      ascending: false,
+    })
+
+  if (articlesError) {
+    console.error(
+      "Erreur sitemap articles :",
+      articlesError.message
+    )
+  }
+
+  const articlePages: MetadataRoute.Sitemap =
+    (articlesData ?? []).map((article) => ({
+      url: `${SITE_URL}/actu/${article.slug}`,
+
+      ...(article.published_at
+        ? {
+          lastModified: new Date(
+            article.published_at
+          ),
+        }
+        : {}),
+    }))
+
+  // ========================================================
+  // REELS PUBLIES
+  // ========================================================
+
+  const {
+    data: reelsData,
+    error: reelsError,
+  } = await supabase
+    .from("reels")
+    .select(`
+      slug,
+      published_at
+    `)
+    .eq("status", "published")
+    .order("published_at", {
+      ascending: false,
+    })
+
+  if (reelsError) {
+    console.error(
+      "Erreur sitemap Reels :",
+      reelsError.message
+    )
+  }
+
+  const reelPages: MetadataRoute.Sitemap =
+    (reelsData ?? []).map((reel) => ({
+      url: `${SITE_URL}/actu/reel/${reel.slug}`,
+
+      ...(reel.published_at
+        ? {
+          lastModified: new Date(
+            reel.published_at
+          ),
+        }
+        : {}),
+    }))
+
+  // ========================================================
+  // SITEMAP FINAL
+  // ========================================================
 
   return [
-    {
-      url: `${baseUrl}/`,
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/faux-plafond-carpentras`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/cloisons-doublages-carpentras`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/placo-decoratif-carpentras`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/isolation-interieure-carpentras`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/realisations`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/actu`,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-
-    ...ACTU_ARTICLES.map((article) => ({
-      url: `${baseUrl}/actu/${article.slug}`,
-      lastModified: article.publishedAt,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
-
-    {
-      url: `${baseUrl}/mentions-legales`,
-      changeFrequency: "yearly",
-      priority: 0.2,
-    },
+    ...staticPages,
+    ...articlePages,
+    ...reelPages,
   ]
 }

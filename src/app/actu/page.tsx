@@ -1,19 +1,23 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+
 import ActuFeed from "@/components/actu/ActuFeed"
 import EnBref from "@/components/actu/EnBref"
 import ActuCTA from "@/components/actu/ActuCTA"
 
+import { createPublicSupabaseClient } from "@/lib/supabase-public"
 import { ACTU_FEATURED, ACTU_FILTERS } from "@/content/actu"
 
 export const metadata: Metadata = {
     title: "Actu",
     description:
         "Chantiers, conseils, réalisations et idées d’aménagement intérieur dans le Vaucluse par Vaucluse Aménagement Intérieur.",
+
     alternates: {
         canonical: "/actu",
     },
+
     openGraph: {
         title: "Actu | Vaucluse Aménagement Intérieur",
         description:
@@ -25,13 +29,97 @@ export const metadata: Metadata = {
     },
 }
 
-export default function ActuPage() {
+export const dynamic = "force-dynamic"
+
+export default async function ActuPage() {
+    const supabase = createPublicSupabaseClient()
+
+    const { data, error } = await supabase
+        .from("articles")
+        .select(`
+      id,
+      slug,
+      category,
+      title,
+      excerpt,
+      image_path,
+      image_alt,
+      published_at
+    `)
+        .eq("status", "published")
+        .order("published_at", {
+            ascending: false,
+        })
+
+    if (error) {
+        throw new Error(
+            `Impossible de charger les articles Actu : ${error.message}`
+        )
+    }
+
+    const articles = (data ?? []).map((article) => {
+        const { data: imageData } = supabase.storage
+            .from("actu-images")
+            .getPublicUrl(article.image_path)
+
+        return {
+            id: article.id,
+            slug: article.slug,
+            category: article.category,
+            title: article.title,
+            excerpt: article.excerpt,
+            imageUrl: imageData.publicUrl,
+            imageAlt: article.image_alt,
+            publishedAt: article.published_at ?? "",
+        }
+    })
+
+    const { data: reelsData, error: reelsError } =
+        await supabase
+            .from("reels")
+            .select(`
+      id,
+      slug,
+      title,
+      category,
+      video_path,
+      published_at
+    `)
+            .eq("status", "published")
+            .order("published_at", {
+                ascending: false,
+            })
+
+    if (reelsError) {
+        throw new Error(
+            `Impossible de charger les Reels : ${reelsError.message}`
+        )
+    }
+
+    const reels = (reelsData ?? []).map((reel) => {
+        const { data: videoData } = supabase.storage
+            .from("actu-videos")
+            .getPublicUrl(reel.video_path)
+
+        return {
+            id: reel.id,
+            title: reel.title,
+            category: reel.category,
+            videoUrl: videoData.publicUrl,
+
+            href: `/actu/reel/${reel.slug}`,
+
+            publishedAt:
+                reel.published_at ?? "",
+        }
+    })
+
     return (
         <main className="bg-white text-zinc-950">
 
             {/* INTRO */}
             <section className="relative overflow-hidden border-b border-zinc-200 bg-[#f6f4ef]">
-                {/* Ambiance visuelle très légère */}
+
                 <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block"
@@ -48,7 +136,9 @@ export default function ActuPage() {
                 </div>
 
                 <div className="relative mx-auto max-w-7xl px-6 py-14 sm:px-10 lg:py-16">
+
                     <div className="max-w-3xl">
+
                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">
                             Actu
                         </p>
@@ -61,9 +151,10 @@ export default function ActuPage() {
                             Réalisations, conseils pratiques, questions clients et idées
                             d’aménagement intérieur dans le Vaucluse.
                         </p>
+
                     </div>
 
-                    {/* FILTRES — visuels uniquement pendant la Phase A */}
+                    {/* FILTRES */}
                     <nav
                         aria-label="Catégories de l'actu"
                         className="mt-9 flex gap-2 overflow-x-auto pb-2"
@@ -81,14 +172,17 @@ export default function ActuPage() {
                             </span>
                         ))}
                     </nav>
+
                 </div>
             </section>
 
             {/* À LA UNE */}
             <section className="px-6 py-16 sm:px-10 lg:py-20">
+
                 <div className="mx-auto max-w-7xl">
 
                     <div className="flex items-end justify-between gap-6">
+
                         <div>
                             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
                                 Sélection
@@ -103,12 +197,14 @@ export default function ActuPage() {
                             Des sujets concrets issus du terrain, des réalisations et des
                             questions rencontrées autour de l’aménagement intérieur.
                         </p>
+
                     </div>
 
                     <div className="mt-10 grid gap-5 lg:grid-cols-[2fr_1fr]">
 
                         {/* SUJET PRINCIPAL */}
                         <article className="group relative min-h-[500px] overflow-hidden rounded-2xl bg-zinc-950 text-white">
+
                             <Image
                                 src={ACTU_FEATURED.primary.image}
                                 alt={ACTU_FEATURED.primary.imageAlt}
@@ -121,6 +217,7 @@ export default function ActuPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/5" />
 
                             <div className="absolute inset-x-0 bottom-0 p-7 sm:p-9 lg:p-10">
+
                                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
                                     {ACTU_FEATURED.primary.category}
                                 </p>
@@ -142,16 +239,19 @@ export default function ActuPage() {
                                         →
                                     </span>
                                 </Link>
+
                             </div>
                         </article>
 
                         {/* SUJETS SECONDAIRES */}
                         <div className="grid gap-5">
+
                             {ACTU_FEATURED.secondary.map((item) => (
                                 <article
                                     key={item.title}
                                     className="group relative min-h-[240px] overflow-hidden rounded-2xl bg-zinc-950 text-white"
                                 >
+
                                     <Image
                                         src={item.image}
                                         alt={item.imageAlt}
@@ -163,6 +263,7 @@ export default function ActuPage() {
                                     <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/20" />
 
                                     <div className="relative z-10 flex min-h-[240px] max-w-[85%] flex-col justify-end p-6 sm:p-7">
+
                                         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-300">
                                             {item.category}
                                         </p>
@@ -182,15 +283,25 @@ export default function ActuPage() {
                                             {item.cta}
                                             <span aria-hidden="true">→</span>
                                         </Link>
+
                                     </div>
                                 </article>
                             ))}
+
                         </div>
+
                     </div>
                 </div>
             </section>
-            <ActuFeed />
+
+            {/* FIL DYNAMIQUE SUPABASE */}
+            <ActuFeed
+                articles={articles}
+                reels={reels}
+            />
+
             <EnBref />
+
             <ActuCTA />
 
         </main>
